@@ -139,7 +139,7 @@ kubectl port-forward service/alertmanager-operated -n monitoring 9093:9093
 ```
 curl <clusterIP>:<Port>/metrics
 #minikube ssh
-#docker@minikube:~$ curl 10.98.169.198:9100/metrics
+#curl 10.98.169.198:9100/metrics
 ```
 ### 🧼 Step 5: Clean UP
 - **Uninstall helm chart**:
