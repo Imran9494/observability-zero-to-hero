@@ -111,9 +111,10 @@ kubectl create ns monitoring
 ```bash
 cd day-2
 
-helm install monitoring prometheus-community/kube-prometheus-stack \
--n monitoring \
--f ./custom_kube_prometheus_stack.yml
+helm install monitoring prometheus-community/kube-prometheus-stack `
+  -n monitoring `
+  -f ./custom_kube_prometheus_stack.yml `
+  --set prometheus.prometheusSpec.maximumStartupDurationSeconds=300
 ```
 
 ### ✅ Step 4: Verify the Installation
