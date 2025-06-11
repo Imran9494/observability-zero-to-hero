@@ -140,6 +140,11 @@ kubectl port-forward service/alertmanager-operated -n monitoring 9093:9093
 curl <clusterIP>:<Port>/metrics
 #minikube ssh
 #curl 10.98.169.198:9100/metrics
+#curl 10.106.208.164/metrics | grep container | grep restart
+
+node-exporter, which scrapes system-level data like CPU, memory, and disk usage (via Linux /proc files) from servers or VMs (e.g., in AWS).
+
+kube-state - gives complete info of ur k8 cluster like the validating webhook config, resource version of ur validating webhook on a particular namespace, pod related info like how many times a container crashed, container restarting etc.This 
 ```
 ### 🧼 Step 5: Clean UP
 - **Uninstall helm chart**:
