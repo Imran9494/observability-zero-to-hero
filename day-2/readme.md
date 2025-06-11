@@ -135,7 +135,12 @@ kubectl port-forward service/monitoring-grafana -n monitoring 8080:80
 ```bash
 kubectl port-forward service/alertmanager-operated -n monitoring 9093:9093
 ```
-
+- **To login to your VM/minikube and see the metrics, ssh to minikube and copy the cluster IP address of your node/kubestate exporter along with it's port and run below command**:
+```
+curl <clusterIP>:<Port>/metrics
+#minikube ssh
+#docker@minikube:~$ curl 10.98.169.198:9100/metrics
+```
 ### 🧼 Step 5: Clean UP
 - **Uninstall helm chart**:
 ```bash
